@@ -23,17 +23,17 @@
   <message name="DocumentAlreadyExist">
     <part name="fault" element="tns:DocumentAlreadyExist"/>
   </message>
-  <message name="findAll">
-    <part name="parameters" element="tns:findAll"/>
-  </message>
-  <message name="findAllResponse">
-    <part name="parameters" element="tns:findAllResponse"/>
-  </message>
   <message name="findById">
     <part name="parameters" element="tns:findById"/>
   </message>
   <message name="findByIdResponse">
     <part name="parameters" element="tns:findByIdResponse"/>
+  </message>
+  <message name="findAll">
+    <part name="parameters" element="tns:findAll"/>
+  </message>
+  <message name="findAllResponse">
+    <part name="parameters" element="tns:findAllResponse"/>
   </message>
   <portType name="DocumentService">
     <operation name="delete">
@@ -46,14 +46,14 @@
       <output wsam:Action="http://service.server/DocumentService/saveResponse" message="tns:saveResponse"/>
       <fault message="tns:DocumentAlreadyExist" name="DocumentAlreadyExist" wsam:Action="http://service.server/DocumentService/save/Fault/DocumentAlreadyExist"/>
     </operation>
-    <operation name="findAll">
-      <input wsam:Action="http://service.server/DocumentService/findAllRequest" message="tns:findAll"/>
-      <output wsam:Action="http://service.server/DocumentService/findAllResponse" message="tns:findAllResponse"/>
-    </operation>
     <operation name="findById">
       <input wsam:Action="http://service.server/DocumentService/findByIdRequest" message="tns:findById"/>
       <output wsam:Action="http://service.server/DocumentService/findByIdResponse" message="tns:findByIdResponse"/>
       <fault message="tns:DocumentNotFound" name="DocumentNotFound" wsam:Action="http://service.server/DocumentService/findById/Fault/DocumentNotFound"/>
+    </operation>
+    <operation name="findAll">
+      <input wsam:Action="http://service.server/DocumentService/findAllRequest" message="tns:findAll"/>
+      <output wsam:Action="http://service.server/DocumentService/findAllResponse" message="tns:findAllResponse"/>
     </operation>
   </portType>
   <binding name="DocumentServiceImplPortBinding" type="tns:DocumentService">
@@ -82,15 +82,6 @@
         <soap:fault name="DocumentAlreadyExist" use="literal"/>
       </fault>
     </operation>
-    <operation name="findAll">
-      <soap:operation soapAction=""/>
-      <input>
-        <soap:body use="literal"/>
-      </input>
-      <output>
-        <soap:body use="literal"/>
-      </output>
-    </operation>
     <operation name="findById">
       <soap:operation soapAction=""/>
       <input>
@@ -102,6 +93,15 @@
       <fault name="DocumentNotFound">
         <soap:fault name="DocumentNotFound" use="literal"/>
       </fault>
+    </operation>
+    <operation name="findAll">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
     </operation>
   </binding>
   <service name="DocumentServiceImplService">

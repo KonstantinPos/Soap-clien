@@ -54,17 +54,6 @@ public interface DocumentService {
 
     /**
      * 
-     * @return
-     *     returns java.util.List<com.Document>
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "findAll", targetNamespace = "http://service.server/", className = "com.FindAll")
-    @ResponseWrapper(localName = "findAllResponse", targetNamespace = "http://service.server/", className = "com.FindAllResponse")
-    public List<Document> findAll();
-
-    /**
-     * 
      * @param arg0
      * @return
      *     returns com.Document
@@ -79,5 +68,16 @@ public interface DocumentService {
         Integer arg0)
         throws DocumentNotFound_Exception
     ;
+
+    /**
+     * 
+     * @return
+     *     returns java.util.List<com.Document>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "findAll", targetNamespace = "http://service.server/", className = "com.FindAll")
+    @ResponseWrapper(localName = "findAllResponse", targetNamespace = "http://service.server/", className = "com.FindAllResponse")
+    public List<Document> findAll();
 
 }

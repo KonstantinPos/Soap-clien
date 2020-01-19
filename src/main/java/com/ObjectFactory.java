@@ -43,78 +43,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Document }
-     * 
-     */
-    public Document createDocument() {
-        return new Document();
-    }
-
-    /**
-     * Create an instance of {@link DocumentAlreadyExist }
-     * 
-     */
-    public DocumentAlreadyExist createDocumentAlreadyExist() {
-        return new DocumentAlreadyExist();
-    }
-
-    /**
-     * Create an instance of {@link Delete }
-     * 
-     */
-    public Delete createDelete() {
-        return new Delete();
-    }
-
-    /**
-     * Create an instance of {@link FindAll }
-     * 
-     */
-    public FindAll createFindAll() {
-        return new FindAll();
-    }
-
-    /**
-     * Create an instance of {@link Save }
-     * 
-     */
-    public Save createSave() {
-        return new Save();
-    }
-
-    /**
-     * Create an instance of {@link DocumentNotFound }
-     * 
-     */
-    public DocumentNotFound createDocumentNotFound() {
-        return new DocumentNotFound();
-    }
-
-    /**
-     * Create an instance of {@link SaveResponse }
-     * 
-     */
-    public SaveResponse createSaveResponse() {
-        return new SaveResponse();
-    }
-
-    /**
-     * Create an instance of {@link FindAllResponse }
-     * 
-     */
-    public FindAllResponse createFindAllResponse() {
-        return new FindAllResponse();
-    }
-
-    /**
-     * Create an instance of {@link FindById }
-     * 
-     */
-    public FindById createFindById() {
-        return new FindById();
-    }
-
-    /**
      * Create an instance of {@link FindByIdResponse }
      * 
      */
@@ -128,6 +56,78 @@ public class ObjectFactory {
      */
     public DeleteResponse createDeleteResponse() {
         return new DeleteResponse();
+    }
+
+    /**
+     * Create an instance of {@link DocumentNotFound }
+     * 
+     */
+    public DocumentNotFound createDocumentNotFound() {
+        return new DocumentNotFound();
+    }
+
+    /**
+     * Create an instance of {@link FindAll }
+     * 
+     */
+    public FindAll createFindAll() {
+        return new FindAll();
+    }
+
+    /**
+     * Create an instance of {@link SaveResponse }
+     * 
+     */
+    public SaveResponse createSaveResponse() {
+        return new SaveResponse();
+    }
+
+    /**
+     * Create an instance of {@link Document }
+     * 
+     */
+    public Document createDocument() {
+        return new Document();
+    }
+
+    /**
+     * Create an instance of {@link FindById }
+     * 
+     */
+    public FindById createFindById() {
+        return new FindById();
+    }
+
+    /**
+     * Create an instance of {@link DocumentAlreadyExist }
+     * 
+     */
+    public DocumentAlreadyExist createDocumentAlreadyExist() {
+        return new DocumentAlreadyExist();
+    }
+
+    /**
+     * Create an instance of {@link Save }
+     * 
+     */
+    public Save createSave() {
+        return new Save();
+    }
+
+    /**
+     * Create an instance of {@link Delete }
+     * 
+     */
+    public Delete createDelete() {
+        return new Delete();
+    }
+
+    /**
+     * Create an instance of {@link FindAllResponse }
+     * 
+     */
+    public FindAllResponse createFindAllResponse() {
+        return new FindAllResponse();
     }
 
     /**
